@@ -2,6 +2,8 @@
 *~
 !.gitignore
 
+# css
+*.css
 
 # dependencies
 /node_modules

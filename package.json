@@ -16,13 +16,18 @@
     "reselect": "^2.5.4"
   },
   "devDependencies": {
+    "node-sass": "^4.5.0",
+    "npm-run-all": "^4.0.2",
     "react-scripts": "0.9.3",
     "redux-devtools": "^3.3.2"
   },
   "scripts": {
+    "build-css": "node-sass src/ -o src/",
+    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch",
     "react-scripts-bin": "NODE_PATH='src/' react-scripts",
-    "start": "npm run react-scripts-bin start",
-    "build": "npm run react-scripts-bin build",
+    "start-js": "npm run react-scripts-bin start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && npm run react-scripts-bin build",
     "test": "npm run react-scripts-bin test --env=jsdom",
     "eject": "npm run react-scripts-bin eject"
   },

@@ -1,0 +1,15 @@
+@import 'variables.scss';
+
+.navbar {
+    &-brand {
+        padding-top: 8px;
+    }
+}
+
+.ppy {
+    &-footer {
+        background-color: darken($well-bg, 7%);
+        margin-top: $jumbotron-padding;
+        padding: $jumbotron-padding;
+    }
+}
