@@ -12,4 +12,10 @@
         margin-top: $jumbotron-padding;
         padding: $jumbotron-padding;
     }
+    &-section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
